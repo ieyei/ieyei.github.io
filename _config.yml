@@ -29,6 +29,19 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  
+# Tag
+collections:
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+defaults:
+  - scope:
+      path: ''
+      type: tags
+    values:
+      layout: tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
