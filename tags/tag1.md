@@ -1,5 +1,5 @@
 ---
 layout: blog_by_tag
-tag: image
+tag: iamge
 permalink: /tags/tag1
 ---
