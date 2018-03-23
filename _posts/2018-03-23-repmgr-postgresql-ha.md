@@ -65,38 +65,86 @@ PostgreSQL 기술 지원, 개발, 컨설팅을 수행하는 **2ndQuadrant** 사�
 1. repmgr, repmgrd 설치 및 구성
 
 2. 구성 절차
+  1. repmgr.conf 설정[primary(10.1.10.14), standby(10.1.10.16)]
 
-   | No   | 작업내용          | Primary Server (10.1.10.14) | Standby Server (10.1.10.16)                              |
-   | ---- | ----------------- | --------------------------- | -------------------------------------------------------- |
-   | 1    | 설정파일          | repmgr.conf 설정            | repmgr.conf 설정                                         |
-   | 2    | Primary 서버 등록 | $ repmgr primary register   |                                                          |
-   | 3    | Standby 서버 구성 |                             | $ repmgr -h 10.1.10.14 -U repmgr -d repmgr standby clone |
-   | 4    | Standby 서버 기동 |                             | $ pg_ctl -D /dbms/data/pgdata start                      |
-   | 5    | Standby 서버 등록 |                             | $ repmgr standby register                                |
+  2. Primary 서버 등록[primary(10.1.10.14)]
 
-   ​
+   ```
+   $ repmgr primary register
+   ```
 
-- TEST
+  3. Standby 서버 구성[standby(10.1.10.16)]
 
-  - Failover 테스트
+   ```
+   $ repmgr -h 10.1.10.14 -U repmgr -d repmgr standby clone
+   ```
 
-    | No   | 작업내용                          | Primary Server (10.1.10.14)                                  | Standby Server (10.1.10.16) |
-    | ---- | --------------------------------- | ------------------------------------------------------------ | --------------------------- |
-    | 1    | primary stop                      | pg_ctl -D /dbms/data/pgdata -m immediate stop                |                             |
-    | 2    | 새로운 standby 서버 구성          | repmgr -h 10.1.10.16 -p 5432 -U repmgr -d repmgr standby clone -F |                             |
-    | 3    | 새로운 standby 서버 start 및 확인 | pg_ctl -D /dbms/data/pgdata start repmgr cluster show        |                             |
-    | 4    | standby 서버로 재등록 및 확인     | repmgr standby register -F            repmgr cluster show    |                             |
+  4. Standby 서버 기동[standby(10.1.10.16)]
 
-  - switchover 테스트
+   ```
+   $ pg_ctl -D /dbms/data/pgdata start
+   ```
 
-    | No   | 작업내용   | Standby Server (10.1.10.14) | Primary Server (10.1.10.16) |
-    | ---- | ---------- | --------------------------- | --------------------------- |
-    | 1    | 사전 점검  | repmgr node check           | repmgr node check           |
-    | 2    | switchover | repmgr standby switchover   |                             |
-    | 3    | 상태 확인  | repmgr cluster show         |                             |
+  5. Standby 서버 등록[standby(10.1.10.16)]
 
-    ​
+   ```
+   $ repmgr standby register
+   ```
 
+
+TEST
+
+- Failover 테스트
+
+  1. primary stop [primary(10.1.10.14)]
+
+     ```
+     $ pg_ctl -D /dbms/data/pgdata -m immediate stop
+     ```
+
+  2. 새로운 standby 서버 구성[old primary(10.1.10.14)]
+
+     ```
+     $ repmgr -h 10.1.10.16 -p 5432 -U repmgr -d repmgr standby clone -F
+     ```
+
+  3. 새로운 standby 서버 start 및 확인 [old primary(10.1.10.14)]
+
+     ```
+     $ pg_ctl -D /dbms/data/pgdata start repmgr cluster show
+     ```
+
+  4. standby 서버로 재등록 및 확인 [old primary(10.1.10.14)]
+
+     ```
+     $ repmgr standby register -F            
+     $ repmgr cluster show
+     ```
+
+     ​
+
+- switchover 테스트
+
+  1. 사전점검 [standby(10.1.10.14), primary(10.1.10.16)]
+
+     ```
+     $ repmgr node check
+     ```
+
+  2. switchover [standby(10.1.10.14)]
+
+     ```
+     $ repmgr standby switchover
+
+     ```
+
+  3. status check
+
+     ```
+     $ repmgr cluster show
+     ```
+
+     ​
 
 
 
