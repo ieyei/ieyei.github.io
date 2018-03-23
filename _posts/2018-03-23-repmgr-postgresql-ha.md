@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "repmgr를 이용하여 postgresql 이중화 구성"
+---
+
 ### repmgr (Replication Manager for PostgreSQL Clusters)
 
 ------
