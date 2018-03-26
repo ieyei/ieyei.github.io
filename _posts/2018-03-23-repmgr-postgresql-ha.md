@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "repmgr를 이용하여 postgresql 이중화 구성"
-
+date: 2018-03-23
 ---
 
 ### repmgr (Replication Manager for PostgreSQL Clusters)
