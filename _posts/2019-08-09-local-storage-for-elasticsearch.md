@@ -275,6 +275,6 @@ $ k port-forward elasticsearch 9200:9200 &
 $ curl -XGET 'localhost:9200/_cat/health?v&pretty'
 Handling connection for 9200
 epoch      timestamp cluster           status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent
-1564705247 00:20:47  nexledger-cluster green           1         1      0   0    0    0        0             0                  -                100.0%
+1564705247 00:20:47  xx-cluster green           1         1      0   0    0    0        0             0                  -                100.0%
 ```
 
