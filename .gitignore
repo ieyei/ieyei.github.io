@@ -4,6 +4,9 @@
 # Production
 /build
 
+# ide
+.idea
+
 # Generated files
 .docusaurus
 .cache-loader
