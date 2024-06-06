@@ -14,3 +14,7 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+architecture:
+  label: Architecture
+  permalink: /architecture
+  description: Architecture tag description
