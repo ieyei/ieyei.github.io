@@ -5,7 +5,8 @@
 /build
 
 # ide
-.idea
+.idea/
+.vscode/
 
 # Generated files
 .docusaurus
