@@ -1,0 +1,26 @@
+# .gitignore
+
+# 시스템 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# 에디터 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 임시 파일
+*.log
+*.tmp
+.cache/
+
+# 로컬 테스트용
+.hugo_build.lock
