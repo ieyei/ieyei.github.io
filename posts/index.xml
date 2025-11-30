@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 내 테크 블로그</title><link>https://ieyei.github.io/posts/</link><description>Recent content in Posts on 내 테크 블로그</description><generator>Hugo -- 0.152.2</generator><language>ko-kr</language><lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ieyei.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo로 블로그 시작하기</title><link>https://ieyei.github.io/posts/my-first-post/</link><pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate><guid>https://ieyei.github.io/posts/my-first-post/</guid><description>&lt;h2 id="소개"&gt;소개&lt;/h2&gt;
+&lt;p&gt;Hugo로 블로그를 시작했습니다! 🎉&lt;/p&gt;
+&lt;h2 id="왜-hugo인가"&gt;왜 Hugo인가?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;빠른 속도&lt;/li&gt;
+&lt;li&gt;마크다운 지원&lt;/li&gt;
+&lt;li&gt;무료 호스팅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="코드-예제"&gt;코드 예제&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hello&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;Hello, Hugo!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="이미지-넣기"&gt;이미지 넣기&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="설명" loading="lazy" src="https://ieyei.github.io/posts/my-first-post/hello.png"&gt;&lt;/p&gt;
+&lt;h2 id="마무리"&gt;마무리&lt;/h2&gt;
+&lt;p&gt;앞으로 열심히 글을 쓰겠습니다!&lt;/p&gt;</description></item></channel></rss>
